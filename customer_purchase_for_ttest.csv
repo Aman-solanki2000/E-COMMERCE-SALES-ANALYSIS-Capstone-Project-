@@ -1,0 +1,73 @@
+USE ecommerce_capstone;
+
+SELECT
+    c.customer_segment,
+    oi.order_id,
+    SUM(
+        oi.quantity * oi.unit_price
+        * (1 - oi.discount_percent/ 100)
+        + oi.shipping_cost
+    ) AS purchase_amount
+FROM customers c
+JOIN orders o
+    ON c.customer_id = o.customer_id
+JOIN order_items oi
+    ON o.order_id = oi.order_id
+WHERE c.customer_segment IN ('New', 'Returning')
+GROUP BY
+    c.customer_segment,
+    oi.order_id; 
+    
+SELECT
+    c.customer_id,
+    c.customer_segment,
+    SUM(
+        oi.quantity * oi.unit_price
+        * (1 - oi.discount_percent / 100)
+        + oi.shipping_cost
+    ) AS total_purchase_amount
+FROM customers c
+JOIN orders o
+    ON c.customer_id = o.customer_id
+JOIN order_items oi
+    ON o.order_id = oi.order_id
+WHERE c.customer_segment IN ('New', 'Returning', 'Loyal')
+GROUP BY
+    c.customer_id,
+    c.customer_segment; 
+    
+    
+    SELECT
+    r.review_score,
+    oi.quantity,
+    oi.discount_percent,
+    oi.shipping_cost,
+    (oi.quantity * oi.unit_price
+     * (1 - oi.discount_percent / 100)
+     + oi.shipping_cost) AS sales_amount
+FROM reviews r
+JOIN order_items oi
+    ON r.order_id = oi.order_id; 
+    
+
+SELECT
+    c.customer_id,
+    COUNT(DISTINCT o.order_id) AS purchase_frequency,
+    SUM(oi.quantity) AS total_quantity,
+    SUM(
+        oi.quantity * oi.unit_price
+        * (1 - oi.discount_percent / 100)
+        + oi.shipping_cost
+    ) AS total_purchase_amount,
+    AVG(
+        oi.quantity * oi.unit_price
+        * (1 - oi.discount_percent / 100)
+        + oi.shipping_cost
+    ) AS average_order_value
+FROM customers c
+JOIN orders o
+    ON c.customer_id = o.customer_id
+JOIN order_items oi
+    ON o.order_id = oi.order_id
+GROUP BY c.customer_id; 
+
