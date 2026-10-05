@@ -49,10 +49,14 @@ Segmented **41,419 unique customers** into 5 distinct behavioral clusters. Key h
 
 ---
 
+
+
 ## 🖥️ Final Dashboard View
 An interactive tool engineered for real-time monitoring of regional performance, customer segments, category revenue, and operational KPIs.
 
-<img width="100%" alt="E-Commerce Sales Analysis Dashboard" src="https://github.com" />
+![E-Commerce Sales Analysis Dashboard](images/dashboard.png)
+
+
 
 ---
 
