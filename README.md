@@ -47,18 +47,22 @@ Segmented **41,419 unique customers** into 5 distinct behavioral clusters. Key h
    * **Basket Size (Quantity):** Marked as the strongest positive driver with a massive coefficient of **+3,123.84**.
    * **Discount %:** Exhibited a negative relationship (**-65.78**), mathematically proving that broad blanket discounting harms overall sales efficiency.
 
+
+
+
+
 ---
-
-
 
 ## 🖥️ Final Dashboard View
 An interactive tool engineered for real-time monitoring of regional performance, customer segments, category revenue, and operational KPIs.
 
-![E-Commerce Sales Analysis Dashboard](images/dashboard.png)
-
-
+![E-Commerce Sales Analysis Dashboard](Picture1.png)
 
 ---
+
+
+
+
 
 ## 🛠️ Data-Driven Strategic Recommendations
 * **Cross-Selling over Discounting:** Replace wide profit-eroding discount schemes with data-backed cross-selling strategies and automated product bundles to maximize basket quantities.
