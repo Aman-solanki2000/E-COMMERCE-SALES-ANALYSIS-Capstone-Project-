@@ -49,6 +49,13 @@ Segmented **41,419 unique customers** into 5 distinct behavioral clusters. Key h
 
 ---
 
+## 🖥️ Final Dashboard View
+An interactive tool engineered for real-time monitoring of regional performance, customer segments, category revenue, and operational KPIs.
+
+<img width="100%" alt="E-Commerce Sales Analysis Dashboard" src="https://github.com" />
+
+---
+
 ## 🛠️ Data-Driven Strategic Recommendations
 * **Cross-Selling over Discounting:** Replace wide profit-eroding discount schemes with data-backed cross-selling strategies and automated product bundles to maximize basket quantities.
 * **Checkout UX Optimizations:** Given that **UPI** dominates digital checkout volume, maintaining zero latency on UPI checkouts is highly mission-critical to eliminate payment friction.
